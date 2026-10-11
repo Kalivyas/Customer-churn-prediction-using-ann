@@ -99,7 +99,7 @@ The mean CV ROC-AUC (0.849) is consistent with the held-out test AUC (0.852), an
 deviation across folds shows the baseline's performance is stable and not the product of a single
 favourable train/test split.
 
-## 8. Innovation (CO5)
+## 8. Innovation 
 
 **What is the innovation compared with the baseline/SOTA methods?**
 
@@ -205,7 +205,7 @@ Note: the executed notebook's numbers can differ from the tables above by ~1-2 p
 
 Or open `notebooks/experiments.ipynb` and run all cells (self-contained: data cleaning, ANN layers, SMOTE and 5-fold CV are all written out inline).
 
-## References (CO4 comparison sources)
+## References 
 
 1. Baby, B., Dawod, Z., Sharif, M. S., & Elmedani, W. (2023). *Customer churn prediction model using artificial neural network: a case study in banking.* 3ICT 2023, IEEE, pp. 154-161. 
 2. Tran, H., Le, N., & Nguyen, V.-H. (2023). *Customer Churn Prediction in the Banking Sector Using Machine Learning-Based Classification Models.* Interdisciplinary Journal of Information, Knowledge, and Management (IJIKM), 18, 87-105. [VERIFY first-author initial and DOI on page 1]
