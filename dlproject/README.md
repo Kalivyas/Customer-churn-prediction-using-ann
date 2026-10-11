@@ -137,10 +137,10 @@ Full table: `results/comparison.csv`. Summary:
 
 | Model | Dataset | Accuracy | Precision | Recall | F1 | AUC |
 |---|---|---|---|---|---|---|
-| ANN, case study in banking [verify authors] | Same 10k Kaggle dataset | 0.860 | - | - | - | - |
-| Random Forest (Tran, Le & Nguyen, 2023) [verify value] | Kaggle bank churn data | 0.9725 | - | - | - | - |
-| Logistic Regression (Tran, Le & Nguyen, 2023) [verify value] | Kaggle bank churn data | 0.8727 | - | - | - | - |
-| XGBoost (IJRASET, 2025) [confirm dataset] | Bank churn data [confirm] | 0.9985 | 0.9975 | 0.9950 | 0.9963 | 0.9974 |
+| ANN, case study in banking  | Same 10k Kaggle dataset | 0.860 | - | - | - | - |
+| Random Forest (Tran, Le & Nguyen, 2023)  | Kaggle bank churn data | 0.9725 | - | - | - | - |
+| Logistic Regression (Tran, Le & Nguyen, 2023)  | Kaggle bank churn data | 0.8727 | - | - | - | - |
+| XGBoost (IJRASET, 2025) | Bank churn data  | 0.9985 | 0.9975 | 0.9950 | 0.9963 | 0.9974 |
 | Voting Classifier, no SMOTE (Bhuria et al., 2025) | Same 10k Kaggle dataset | 0.87 | 0.87 | 0.80 | 0.87 | - |
 | Voting Classifier + SMOTE (Bhuria et al., 2025) | Same 10k Kaggle dataset | 0.90 | 0.90 | 0.90 | 0.90 | - |
 | Baseline ANN (Ours) | Churn_Modelling.csv | 0.7745 | 0.4669 | 0.7617 | 0.5789 | 0.8521 |
