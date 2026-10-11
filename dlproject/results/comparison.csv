@@ -5,5 +5,5 @@ Model,Dataset,Accuracy,Precision,Recall,F1,AUC,Parameters,Source
 "XGBoost (IJRASET Feb 2025) ",Bank churn dataset [confirm],0.9985,0.9975,0.9950,0.9963,0.9974,-,"IJRASET Vol 13 Issue II, Feb 2025, Table 2"
 "Voting Classifier, no SMOTE (Bhuria et al. 2025)",Same 10k Kaggle dataset (13 features),0.87,0.87,0.80,0.87,-,-,"Discover Sustainability 2025, doi.org/10.1007/s43621-025-00807-8"
 "Voting Classifier + SMOTE (Bhuria et al. 2025)",Same 10k Kaggle dataset (13 features),0.90,0.90,0.90,0.90,-,-,"Discover Sustainability 2025, doi.org/10.1007/s43621-025-00807-8"
-"Baseline ANN (Ours, class_weight only)",Churn_Modelling.csv (this project),0.7745,0.4669,0.7617,0.5789,0.8521,~440 trainable (16+8+1 dense),This project
-"Proposed ANN + SMOTE (Ours, CO5)",Churn_Modelling.csv (this project),0.8125,0.5303,0.6880,0.5989,0.8540,~440 trainable (16+8+1 dense),This project
+"Baseline ANN (Ours, class_weight only)",Churn_Modelling.csv (this project),0.7745,0.4669,0.7617,0.5789,0.8521,~337 trainable (16+8+1 dense),This project
+"Proposed ANN + SMOTE (Ours, CO5)",Churn_Modelling.csv (this project),0.8125,0.5303,0.6880,0.5989,0.8540,~337 trainable (16+8+1 dense),This project
