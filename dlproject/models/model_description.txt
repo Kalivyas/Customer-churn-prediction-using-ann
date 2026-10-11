@@ -1,0 +1,29 @@
+MODEL DESCRIPTION
+==================
+
+Two models are provided in this folder, both saved in Keras v3 format (.keras):
+
+1. baseline_ann.keras
+   - Architecture: Dense(16, relu) -> Dense(8, relu) -> Dense(1, sigmoid)
+   - Input dim: 11 (engineered features, see data/dataset_information.txt)
+   - Imbalance handling: Keras class_weight (inverse class frequency)
+   - Optimizer: Adam, lr=0.001
+   - Loss: binary_crossentropy
+   - Trained for 38 epochs (early stopping on val_loss, patience=10, restore_best_weights)
+
+2. proposed_ann_smote.keras   <-- CO5 Innovation model
+   - Same architecture as baseline (Dense(16)->Dense(8)->Dense(1))
+   - Imbalance handling: SMOTE oversampling applied to the TRAINING set only
+     (8,000 -> 12,740 samples, balanced to 50/50) before training; no class_weight used
+   - Optimizer: Adam, lr=0.001
+   - Loss: binary_crossentropy
+   - Trained for 150 epochs (ran to the epoch cap without early stopping triggering)
+
+Why the architecture is held constant between the two models:
+Keeping the network identical isolates the effect of the imbalance-handling strategy
+(loss-reweighting vs. data-level oversampling) as the sole independent variable, which is
+what the ablation study in results/ablation_study.csv reports on.
+
+test_split.npz contains the exact train/test arrays (X_train, y_train, X_test, y_test)
+produced by src/preprocessing.py with random_state=42, so src/test.py evaluates both
+models on an identical held-out test set.

@@ -1,0 +1,57 @@
+DATASET INFORMATION
+====================
+
+Name: Bank Customer Churn Modelling Dataset (Churn_Modelling.csv)
+Source: Kaggle - "Churn Modelling" / "Bank Customer Churn Prediction"
+        (commonly used benchmark dataset, 10,000 bank customer records)
+
+Total samples: 10,000
+Total raw columns: 14
+Missing values: 0 (no imputation was required, though the pipeline handles
+                    missing values defensively with median/mode imputation)
+
+Target column: Exited (binary: 1 = customer churned, 0 = customer stayed)
+
+Class distribution (imbalanced):
+  Stayed (0): 7,963 samples (79.63%)
+  Exited (1): 2,037 samples (20.37%)
+
+Dropped columns (identifiers, no predictive value):
+  - RowNumber
+  - CustomerId
+  - Surname
+
+Feature columns used for modelling (11 after encoding):
+  - CreditScore        (numeric)
+  - Geography           (categorical, one-hot: Geography_Germany, Geography_Spain;
+                          France is the reference category)
+  - Gender              (categorical, binary label-encoded: Female=0, Male=1)
+  - Age                 (numeric)
+  - Tenure              (numeric, years with bank)
+  - Balance             (numeric)
+  - NumOfProducts       (numeric)
+  - HasCrCard           (binary)
+  - IsActiveMember      (binary)
+  - EstimatedSalary     (numeric)
+
+Geography distribution: France 5,014 | Germany 2,509 | Spain 2,477
+Gender distribution:     Male 5,457   | Female 4,543
+
+Train / Validation / Test split:
+  - Test set:        20% of total data (2,000 samples), stratified by Exited
+  - Train pool:       80% of total data (8,000 samples)
+  - Validation split: 20% of the training pool taken internally during model.fit()
+                       (i.e. ~6,400 train / ~1,600 validation / 2,000 test)
+  - random_state = 42 used throughout for reproducibility
+
+Preprocessing steps applied (src/preprocessing.py):
+  1. Drop identifier columns (RowNumber, CustomerId, Surname)
+  2. Median-impute missing numeric values (none present in this dataset)
+  3. Mode-impute missing categorical values (none present in this dataset)
+  4. Label-encode binary categorical columns (Gender)
+  5. One-hot encode multi-class categorical columns (Geography), drop_first=True
+  6. Stratified train/test split (80/20)
+  7. StandardScaler fit on training data only, applied to both train and test
+     (prevents data leakage)
+  8. [Proposed model only] SMOTE oversampling applied to the training set
+     after scaling, to correct the 79.6/20.4 class imbalance before training
