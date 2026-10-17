@@ -30,7 +30,7 @@
   6. StandardScaler fit on training data only (no leakage)
   7. **[Proposed model only]** SMOTE oversampling applied to the scaled training set
 
-Full details: `data/dataset_information.txt`
+
 
 ## 4. Model
 
