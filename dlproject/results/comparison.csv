@@ -2,7 +2,7 @@ Model,Dataset,Accuracy,Precision,Recall,F1,AUC,Parameters,Source
 "ANN (Case Study, Banking)",Same 10k Kaggle Churn_Modelling dataset,0.86,-,-,-,-,-,"Baby, Dawod, Sharif & Elmedani (2023), 3ICT, IEEE [verify authors on PDF page 1]"
 "Random Forest (Tran, Le & Nguyen 2023) ",Kaggle bank churn dataset,0.9725,-,-,-,-,-,"IJIKM vol 18, pp. 87-105"
 "Logistic Regression (Tran, Le & Nguyen 2023) ",Kaggle bank churn dataset,0.8727,-,-,-,-,-,"IJIKM vol 18, pp. 87-105"
-"XGBoost (IJRASET Feb 2025) ",Bank churn dataset [confirm],0.9985,0.9975,0.9950,0.9963,0.9974,-,"IJRASET Vol 13 Issue II, Feb 2025, Table 2"
+"XGBoost (IJRASET Feb 2025) ",Bank churn dataset 0.9985,0.9975,0.9950,0.9963,0.9974,-,"IJRASET Vol 13 Issue II, Feb 2025, Table 2"
 "Voting Classifier, no SMOTE (Bhuria et al. 2025)",Same 10k Kaggle dataset (13 features),0.87,0.87,0.80,0.87,-,-,"Discover Sustainability 2025, doi.org/10.1007/s43621-025-00807-8"
 "Voting Classifier + SMOTE (Bhuria et al. 2025)",Same 10k Kaggle dataset (13 features),0.90,0.90,0.90,0.90,-,-,"Discover Sustainability 2025, doi.org/10.1007/s43621-025-00807-8"
 "Baseline ANN (Ours, class_weight only)",Churn_Modelling.csv (this project),0.7745,0.4669,0.7617,0.5789,0.8521,~337 trainable (16+8+1 dense),This project
